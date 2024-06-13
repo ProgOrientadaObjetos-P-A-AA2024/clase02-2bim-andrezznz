@@ -10,9 +10,12 @@ public class EstudianteDistancia extends Estudiante{
         
     public EstudianteDistancia(String n, String ap, String iden, int e, 
             int numAsg, double costoAsg){
+        // al momento de recibir y enviar a la superClase no es necesario llamar
+        // a los metodos establecer
         super(n, ap, iden, e);
         numeroAsignaturas = numAsg;
         costoAsignatura = costoAsg;
+        // recibe parametros y envia lo que tiene que enviar a la SuperClase
     }
     
     // 2.  Método establecerNumeroAsginaturas(numero: Real)
