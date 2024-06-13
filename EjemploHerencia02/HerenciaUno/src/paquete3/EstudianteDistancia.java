@@ -8,7 +8,9 @@ public class EstudianteDistancia extends Estudiante{
     private double matriculaDistancia;
     
     public EstudianteDistancia(String n, String ap, String iden, int e){
-        super(n, ap, iden, e);
+        super(n, ap, iden, e); // se los usa para llamar al constructor de la 
+        // super clase
+        // tiene lo que recibe, sea lo que sea y los envia a la SuperClase
     }
     
     // 2.  Método establecerNumeroAsginaturas(numero: Real)
@@ -22,7 +24,7 @@ public class EstudianteDistancia extends Estudiante{
     }
 
     // 4.  Método calcularMatriculaDistancia()
-    public void calcularMatriculaDistancia(){
+    public void calcularMatriculaDistancia(){ // todo calcular trabaja con lo que tiene en ese instante
         matriculaDistancia = numeroAsignaturas * costoAsignatura;
     }
 
@@ -41,5 +43,36 @@ public class EstudianteDistancia extends Estudiante{
     public double obtenerMatriculaDistancia(){
         return matriculaDistancia;
     }
+    
+    /*
+    @Override
+    public String toString(){
+        String cadena = String.format(" Nombre estudiantes: %s\n"
+                + "Numero De Asignaturas: %d\n"
+                + " Valor de Asignatura: %.2f\n"
+                + " Valor Matricula: %.2f\n", 
+                obtenerNombresEstudiante(),
+                numeroAsignaturas,
+                costoAsignatura,
+                matriculaDistancia);
+        
+        return cadena;
+    }*/
+    
+    @Override
+    public String toString(){
+        String cadena = String.format("%s\n"
+                + "Numero De Asignaturas: %d\n"
+                + "Valor de Asignatura: %.2f\n"
+                + "Valor Matricula: %.2f\n", 
+                super.toString(), 
+                // se llama al toString de la SuperClase con la palabra reservada "super"
+                numeroAsignaturas,
+                costoAsignatura,
+                matriculaDistancia);
+        
+        return cadena;
+    }
+    
 
 }

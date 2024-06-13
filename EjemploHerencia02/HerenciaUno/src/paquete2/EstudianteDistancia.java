@@ -1,5 +1,11 @@
 package paquete2;
 
+/*
+ existe un ERROR ya que no existe un constructor en la SubClase
+ se anadie un constructor en la Subsclase ya que en la SuperClase "Estudiante"
+ debe ser uso obligatoria de los constructores de sus SubClases.
+*/
+
 public class EstudianteDistancia extends Estudiante{
     
     private int numeroAsignaturas;
